@@ -1,0 +1,89 @@
+/* RECEPTION CSS */
+
+h2{
+    text-align: center;
+    color: rgb(255, 5, 105);
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.container{
+    margin-top: auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin-left:100px;
+    /* justify-content: center; */
+    
+}
+
+.card {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+ transition: transform 0.3s;
+ 
+
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 18rem;
+    height: 150px;
+    object-fit: cover;
+}
+.card-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    /* width: 100%; */
+    max-width: 1100px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 18rem;
+    height: 150px;
+    object-fit: cover;
+}
+   
+.slider-container {
+    width: 250%;
+    overflow: hidden;
+    /* position: relative; */
+    margin: auto;
+    
+    
+}
+.slider {
+    display: flex;
+    width: 170%;
+    transition: transform 1s ease-in-out;
+}
+.slider video {
+    width: 90vw;
+    height: 500px;
+    flex: 1;
+}

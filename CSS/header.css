@@ -1,0 +1,99 @@
+/* General Reset */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  /* Body */
+  body {
+    font-family: 'Arial', sans-serif; 
+    background: url("../images/bg3.webp")no-repeat center center fixed;
+    background-size: cover;
+  }
+  /* Navbar Styling */
+  /* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    /* background-color: #fff; */
+    /* background: rgba(255, 255, 255, 0.95); */
+   /* color: #e1a7a1;
+   font-weight: 400;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: medium;
+    padding:  10px 15px ; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* flex-wrap: wrap; */
+    /* height: 100px; */
+  
+  /* .navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+  }
+  .navbar .logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 100px;
+  } */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: #c28d7f;
+    
+    top: 0;
+    z-index: 1000; /* Increased to ensure visibility */
+    
+      position: absolute; /* Changed from sticky to absolute */
+      top: 0;
+      transition: transform 0.1s ease; /* Smooth transition */
+  
+  
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.logo img {
+    width: 70%;
+    height: 100px;
+    margin-right: 100px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+  .navbar h2 {
+    font-size: 24px;
+    color: #6c4f47; 
+  }
+  .nav-links {
+     list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+  }
+  .nav-links li {
+     margin-left:  10px  ; 
+  }
+  .nav-links a {
+    text-decoration: none;
+     color: #6c4f47; 
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 20px 15px;
+  }
+  .nav-links a:hover {
+    color: #e1a7a1; 
+  }
+
+
+
+

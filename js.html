@@ -1,0 +1,17 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("reveal");
+            } else {
+                entry.target.classList.remove("reveal"); // Remove for repeated animation
+            }
+        });
+    }, { threshold: 0.5 }); // 50% image dikhne par trigger hoga
+
+    document.querySelectorAll(".hidden-image").forEach(img => {
+        observer.observe(img);
+    });
+});
+</script>

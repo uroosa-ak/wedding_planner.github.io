@@ -1,0 +1,15 @@
+/* footer  */
+.f{
+    color:black;
+    /* background-color: #e2d3d3; */
+    background-color: #343a40;
+border-radius: 5px;
+font-size: 20px;
+padding: 10px;
+/* background: linear-gradient(to right, rgb(68, 35, 66), rgb(126, 20, 43)); */
+}
+.h:hover{
+    text-decoration-line: underline;
+    text-decoration-style:solid;
+    transform:rotatex(75deg);
+}

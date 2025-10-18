@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Love & Forever</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+      <!-- Navbar Section -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="logo ">
+      <img  src="../images/logo2.jpg" alt="">
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="nav-links navbar-nav ms-auto">
+      <li class="nav-item"><a href="../HTML/index.html">Home</a></li>
+      <li class="nav-item"><a href="../HTML/about.html">About</a></li>
+       <li class="dropdown">
+        <a href="../HTML/general decoration.html" class="dropbtn">Gallery</a> 
+
+        <!-- <div class="dropdown-content">
+            <a href="../HTML/venue.html">Venues</a>
+            <a href="#">Decor Ideas</a>
+            <a href="../HTML/theme decoration.html">Theme decoration</a>
+            <a href="  <li><a class="dropdown-item" href="../HTML/theme decoration.html">Theme decoration</a></li></a>
+        </div>  -->
+       
+      
+      <li class="dropdown">
+        <a href="../HTML/contact.html" class="dropbtn">Contact</a>
+      
+    </li>
+    <li>
+  
+
+    
+      <!-- <div class="d-flex gap-3"> -->
+        <a href="#" class="text-dark"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+      <!-- </div> -->
+
+  </li>
+    </ul>
+  </nav><br><br><br><br><br>
+    <div id="bgdiv"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center mb-5">
+                <div class="decoration-1"> Contact Us </div>
+                <div class="decoration"> Today to Begin Your Journey! </div>
+
+                <p class="lead">Welcome to <strong>Wedding Planners</strong>, where we turn dreams into reality. With
+                    over <strong>10 years of experience</strong>, we specialize in creating unforgettable weddings, from
+                    intimate gatherings to grand cultural celebrations and breathtaking destination weddings. Let us
+                    handle the details while you enjoy your special day.</p>
+
+                <div class="decoration">❤</div>
+                <h1 class="mb-3" style="font-family: 'Playfair Display', serif;">Get in Touch</h1>
+                <p class="lead" style="font-family: 'Playfair Display', serif;">Let's make your special day
+                    unforgettable!</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="form-container">
+                        <h2 class="text-center mb-4" style="color: #ff7eb3;">💌 Contact Us</h2>
+                        <form id="weddingForm" onsubmit="return handleSubmit(event)">
+                            <div class="mb-3">
+                                <label class="form-label" style="color: #ff7eb3;">First Name</label>
+                                <input type="text" class="form-control" placeholder="First Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" style="color: #ff7eb3;">Email</label>
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <!-- Contact Number Field -->
+                            <div class="mb-3">
+                                <label class="form-label" style="color: #ff7eb3;">Contact Number</label>
+                                <div class="input-group">
+                                    <select class="form-select" style="max-width: 120px; border-color: #ff7eb3;">
+                                        <option value="+1">+1 (US)</option>
+                                        <option value="+44">+44 (UK)</option>
+                                        <option value="+91">+91 (IN)</option>
+                                        <option value="+61">+92 (PK)</option>
+                                    </select>
+                                    <input type="tel" class="form-control" placeholder="Enter phone number"
+                                        style="border-color: #ff7eb3;" required>
+                                </div>
+                            </div>
+                            <!-- Event Date Picker -->
+                            <div class="mb-3">
+                                <label class="form-label" style="color: #ff7eb3;">Event Date</label>
+                                <input type="date" class="form-control" style="border-color: #ff7eb3;" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" style="color: #ff7eb3;">Subject</label>
+                                <input type="text" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" style="color: #ff7eb3;">Message:</label>
+                                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message">
+            💖 Message Sent Successfully!
+        </div>
+        <script>
+            function handleSubmit(event) {
+                event.preventDefault();
+
+                var successMessage = document.getElementById("successMessage");
+                successMessage.style.display = "block"; // Success message show karega
+
+                event.target.reset(); // Form reset karega
+
+                // 3 second baad success message hide ho jayega
+                setTimeout(function () {
+                    successMessage.style.display = "none";
+                }, 3000);
+            }
+
+           
+        </script>
+
+
+
+
+
+
+        <!-- <script>
+            function handleSubmit(event) {
+                event.preventDefault();
+                
+                // Show success message
+                const successMessage = document.querySelector('.success-message');
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                event.target.reset();
+                
+                // Hide message after 3 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 3000);
+                
+                return false;
+            }
+    
+            // Add animation to form elements on load
+            document.addEventListener('DOMContentLoaded', () => {
+                const inputs = document.querySelectorAll('.form-control');
+                inputs.forEach((input, index) => {
+                    setTimeout(() => {
+                        input.style.opacity = '1';
+                        input.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            });
+        </script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <div class="col-lg-12 col-md-12">
+            <div class="map-container p-2 ">
+                <!-- Replace this iframe with your actual Google Maps embed code -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d57921.42550160505!2d66.95985083169859!3d24.860806504833857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi!3m2!1d24.860734299999997!2d67.0011364!4m0!5e0!3m2!1sen!2s!4v1741548681900!5m2!1sen!2s"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Footer -->
+ <footer class="text-left text-lg-start  "> 
+  
+    <!-- Section: Social media --> -->
+    -->
+    <!-- Section: Links  -->
+    <!-- <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <!-- <div class="row mt-3">
+          <!-- Grid column -->
+          <!-- <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"> -->
+            <!-- Content -->
+            <!-- <h6 class="text-uppercase fw-bold mb-4">
+              <a class="text-reset fw-bold" href="../HTML/index.html">
+              <i class="fas fa-gem me-3"></i>The Wedding Planner 
+              </a>
+             
+            </h6>
+            <p>
+              <b>Planning a wedding is a remarkable journey filled with love, joy, and 
+               anticipation. It’s an occasion that marks the beginning of a lifetime of 
+               shared adventures and cherished memories.</b>
+            </p>
+          </div> -->
+          <!-- Grid column -->
+   
+          <!-- Grid column -->
+           <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"> 
+             <h6 class="text-uppercase fw-bold mb-4">
+                <h6 style="font-weight:700 ;">Location</h6>
+               <br>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.1676112893374!2d-106.95748368823416!3d44.79777267753583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5335fabc2a6d206b%3A0x1887ab0668b2495c!2s30%20N%20Gould%20St%20Suite%20R%2C%20Sheridan%2C%20WY%2082801%2C%20USA!5e0!3m2!1sen!2s!4v1736710586599!5m2!1sen!2s" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+            </h6>
+           
+          </div>  -->
+          <!-- Grid column -->
+   
+          <!-- Grid column -->
+          <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"> -->
+            <!-- Links -->
+            <!-- <h6 class="text-uppercase  mb-4 fw-bold">
+              Useful link
+            </h6> -->
+            <!-- <p>
+              <a href="#" class=" me-4 text-reset  ">
+                <i class="fab fa-facebook h"></i>facebook</a>
+               
+            </p>
+            <p> -->
+              <!-- <a href="#" class="me-4 text-reset ">
+                <i  class="fab fa-instagram h"></i>instagram
+              </a> -->
+<!--             
+            </p>
+            <p>
+              <a href="#" class=" me-4 text-reset ">
+                <i class="fab fa-youtube h"></i>youtube
+              </a>
+             
+             
+            </p>
+            <p> -->
+              <!-- <a href="#" class=" me-4 text-reset ">
+                <i class="fab fa-tiktok h"></i>tiktok
+              </a>
+            </p>
+            <p>
+              <a href="#" class=" me-4 text-reset ">
+                <i class="fab fa-pinterest h"></i>pinterest
+              </a>
+            </p> -->
+          <!-- </div>  -->
+          <!-- Grid column -->
+   
+          <!-- Grid column -->
+          <!-- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"> -->
+            <!-- Links -->
+            <!-- <h6 class="text-uppercase fw-bold mb-4 fw-bold">Contact</h6>
+            <p><i class="fas fa-home me-3"></i>30 N Gould St Ste R,Sheridan</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              weddingplanner@gmail.com
+            </p> -->
+            <!-- <p><i class="fas fa-phone me-3"></i> + 92 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 92 234 567 89</p>
+          </div> -->
+          <!-- Grid column --> 
+        <!-- </div> -->
+        <!-- Grid row -->
+      <!-- </div>
+    </section> -->
+    <!-- Section: Links  -->
+   
+    <!-- Copyright -->
+    <div class="text-center p-4" style="  background-color: rgba(0, 0, 0, 0.05);">
+      © 2010-2025 The wedding Planner
+      <a class="text-reset fw-bold" href="#">All Rights Reserved.</a>
+    </div>
+    <!-- Copyright -->
+   </footer> 
+   <!-- Footer --> 
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you! Your message has been sent. We will get back to you soon! ❤');
+            event.target.reset();
+            return false;
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
